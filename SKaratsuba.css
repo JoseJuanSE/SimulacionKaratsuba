@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+h1{
+    font-family: "Quicksand";
+    text-align: center;
+    color: #001b48;
+    font-size: 300%;
+}
+h2{
+    font-family: "Quicksand";
+    text-align: center;
+    color: #02457A;
+    font-size: 200%;
+}
