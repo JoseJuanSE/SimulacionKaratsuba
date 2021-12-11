@@ -11,3 +11,15 @@ h2{
     color: #02457A;
     font-size: 200%;
 }
+.lectura{
+    font-family: "Quicksand";
+    text-align:center;
+    font-size: 150%;
+}
+.design{
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    width: 25em;
+    text-align:center;
+}
