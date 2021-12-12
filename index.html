@@ -26,5 +26,42 @@
             </form>
         </div>
     </div>
+    <div class="seleccion">
+        <input class="designbutton" type="button" value="Fuerza Bruta" id="fbruta" onclick="asignar(1);">
+        <input class="designbutton" type="button" value="Karatsuba" id="fkaratsuba" onclick="asignar(2);">
+    </div>
+    <div class="display" style="width: 45%; float:left">
+        <label id="display1"></label><br>
+        <label id="display2"><u></u></label><br>
+    </div>
+    <script>
+        var marcado=0;
+        var n1;
+        var n2;
+        function asignar(valor){
+            marcado=valor;
+            desmarcar();
+        }
+        function desmarcar(){
+            document.getElementById('fbruta').style.backgroundColor="#018ABE";
+            document.getElementById('fkaratsuba').style.backgroundColor="#018ABE";
+            marcar(marcado);
+            ejecutar(marcado);
+        }
+        function marcar(id){
+            if(id==1){
+                document.getElementById('fbruta').style.backgroundColor="#001b48";
+                fb(id);
+            }
+            if(id==2)
+                document.getElementById('fkaratsuba').style.backgroundColor="#001b48";
+        }
+        function fb(id){
+            n1=document.getElementById("nuno").value;
+            document.getElementById('display1').innerHTML = n1;
+            n2=document.getElementById("ndos").value;
+            document.getElementById('display2').innerHTML = "X"+n2;
+        }
+    </script>
 </body>
 </html>
