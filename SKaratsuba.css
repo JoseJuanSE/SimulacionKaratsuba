@@ -41,6 +41,18 @@ h2{
     height: 40px;
     font-size: 100%;
 }
+.designbutton:hover{
+    font-family: "Quicksand";
+    border: 0;
+    text-align:center;
+    background-color: #02457A;
+    color: white;
+    line-height: 2.5;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 100%;
+}
 .display{
     font-family: "Quicksand";
     text-align:right;
