@@ -63,3 +63,10 @@ h2{
 #display2{
     text-decoration: underline;
 }
+.pseudo{
+    font-family: "Quicksand";
+    text-align:left;
+    font-size: 250%;
+    margin: 15px;
+    color: #02457A;
+}

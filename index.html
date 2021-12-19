@@ -30,18 +30,25 @@
         <input class="designbutton" type="button" value="Fuerza Bruta" id="fbruta" onclick="asignar(1);">
         <input class="designbutton" type="button" value="Karatsuba" id="fkaratsuba" onclick="asignar(2);">
     </div>
-    <div>
+    <div style="width: 50%; float:left" id="Bloque">
         <div style="width: 10%; float:left" id="BPasos">
             <input class="designbutton" type="button" value="Pasos" id="bpasos" onclick="asignar(3);" style="display: none;">
             <input class="designbutton" type="button" value="Reset" id="breset" onclick="asignar(4);" style="display: none;">
         </div>
-        <div style="width: 35%; float:left" class="display" >
+        <div style="width: 75%; float:left" class="display" >
             <div>
                 <label id="display1"></label><br>
                 <label id="display2"><u></u></label><br>
             </div>
             <div id="contenedor"></div>
         </div>
+    </div>
+    <div style="width: 50%; float:right" id="Bloque2">
+        <div class="pseudo">
+            <label id="display3"></label><br>
+            <div id=pseudocode></div>
+        </div>
+
     </div>
     <script>
         var marcado=0;
@@ -79,38 +86,48 @@
             n2=document.getElementById("ndos").value;
             document.getElementById('display2').innerHTML = "X"+n2;
             document.getElementById('bpasos').style.display = 'inline';
+            document.getElementById('display3').innerHTML="Se multiplicará "+n1+" X "+n2+".";
         }
         function bruteforce(){
             var acompletar="";
             var sn2=n2.toString();
             var aux=parseInt(sn2[sn2.length-1-actual]);
             var newLabel = document.createElement('label');
-            //newLabel.className += "col-md-3 control-label";
+            var newLabel2 = document.createElement('label');
             for(var i=0;i<actual;++i){
                 acompletar=acompletar.concat("0");
             }
             if(actual!=n2.length){
-                if(actual==n2.length-1)newLabel.innerHTML ='<u>'+n1*aux+acompletar+'</u><br>';
-                else
+                if(actual==n2.length-1){
+                    newLabel.innerHTML ='<u>'+n1*aux+acompletar+'</u><br>';
+                    newLabel2.innerHTML = "Se multiplica "+aux+" X "+n1+'<br>';                }
+                else{
                     newLabel.innerHTML =n1*aux+acompletar+'<br>';
+                    newLabel2.innerHTML = "Se multiplica "+aux+" X "+n1+'<br>';  
+                }
                 actual+=1;
             }
             else{
                 newLabel.innerHTML = n1*n2+'<br>';
+                newLabel2.innerHTML = "El resultado final es "+n1*n2+'<br>';
                 actual=0;
                 document.getElementById('bpasos').style.display = 'none';
                 document.getElementById('breset').style.display = 'inline';
             }
+            var pseudo = document.getElementById('pseudocode');
             var contenedor = document.getElementById('contenedor');
             contenedor.appendChild(newLabel);
+            pseudo.appendChild(newLabel2);
         }
         function reset(){
             document.getElementById("contenedor").innerHTML="";
+            document.getElementById("pseudocode").innerHTML="";
             document.getElementById("nuno").innerHTML="";
             document.getElementById("ndos").innerHTML="";
             document.getElementById("display1").innerHTML="";
             document.getElementById("display2").innerHTML="";
             document.getElementById('breset').style.display = 'none';
+            document.getElementById("display3").innerHTML="";
             marcado=0;
         }
     </script>
