@@ -36,6 +36,9 @@
             <input class="designbutton" type="button" value="Reset" id="breset" onclick="asignar(4);" style="display: none;">
         </div>
         <div style="width: 75%; float:left" class="display" >
+            <div class="carrys">
+                <label id="carry"></label><br>
+            </div>
             <div>
                 <label id="display1"></label><br>
                 <label id="display2"><u></u></label><br>
@@ -91,13 +94,23 @@
         function bruteforce(){
             var acompletar="";
             var sn2=n2.toString();
+            var sn1=n1.toString();
             var aux=parseInt(sn2[sn2.length-1-actual]);
+            var aux2;
+            var acarreos=" 0";
             var newLabel = document.createElement('label');
             var newLabel2 = document.createElement('label');
             for(var i=0;i<actual;++i){
                 acompletar=acompletar.concat("0");
             }
+            
             if(actual!=n2.length){
+                for(var j=sn1.length-1;j>0;--j){
+                    aux2=parseInt(sn1[j]);
+                    aux2=((aux*aux2)/10);
+                    aux2=Math.floor(aux2);
+                    acarreos=" "+aux2+acarreos;
+                }
                 if(actual==n2.length-1){
                     newLabel.innerHTML ='<u>'+n1*aux+acompletar+'</u><br>';
                     newLabel2.innerHTML = "Se multiplica "+aux+" X "+n1+'<br>';                }
@@ -113,11 +126,13 @@
                 actual=0;
                 document.getElementById('bpasos').style.display = 'none';
                 document.getElementById('breset').style.display = 'inline';
+                acarreos="";
             }
             var pseudo = document.getElementById('pseudocode');
             var contenedor = document.getElementById('contenedor');
             contenedor.appendChild(newLabel);
             pseudo.appendChild(newLabel2);
+            document.getElementById('carry').innerHTML = acarreos;
         }
         function reset(){
             document.getElementById("contenedor").innerHTML="";

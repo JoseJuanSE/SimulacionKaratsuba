@@ -70,3 +70,10 @@ h2{
     margin: 15px;
     color: #02457A;
 }
+.carrys{
+    font-family: "Quicksand";
+    text-align:right;
+    font-size: 70%;
+    margin: 0px;
+    color: #001b48;
+}
