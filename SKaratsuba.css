@@ -77,3 +77,64 @@ h2{
     margin: 0px;
     color: #001b48;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #02457a;
+}
+  
+li {
+    float: left;
+}
+  
+li a {
+    font-family: "Quicksand";
+    font-size: 150%;
+    display: block;
+    color: #d6ebee;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #001b48;
+}
+.textoFBruta { 
+    font-family: "Quicksand"; 
+    color: #ffffff; 
+    font-size: 18px; 
+    font-weight: 400; 
+    text-align: center; 
+    background: #018ABE; 
+    margin: 0 0 25px; 
+    overflow: hidden; 
+    padding: 20px; 
+    border-radius: 0px 35px 0px 35px; 
+    -moz-border-radius: 0px 35px 0px 35px; 
+    -webkit-border-radius: 0px 35px 0px 35px; 
+    border: 8px double #02457a;
+    -webkit-box-shadow: 10px 10px 5px -2px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 5px -2px rgba(0,0,0,1);
+    box-shadow: 10px 10px 5px -2px rgba(0,0,0,1);
+}
+.textoKaratsuba { 
+    font-family: "Quicksand"; 
+    color: #ffffff; 
+    font-size: 18px; 
+    font-weight: 400; 
+    text-align: center; 
+    background: #018ABE; 
+    margin: 0 0 25px; 
+    overflow: hidden; 
+    padding: 20px; 
+    border-radius: 35px 0px 35px 0px; 
+    -moz-border-radius: 35px 0px 35px 0px; 
+    -webkit-border-radius: 35px 0px 35px 0px; 
+    border: 8px double #02457a;
+    -webkit-box-shadow: 10px 10px 5px -2px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 5px -2px rgba(0,0,0,1);
+    box-shadow: 10px 10px 5px -2px rgba(0,0,0,1);
+}
