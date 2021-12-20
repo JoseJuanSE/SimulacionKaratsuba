@@ -9,7 +9,7 @@
 </head>
 <body style="background:#97CADB">
     <div>
-        <h1>Multiplicación de números grandes</h1>
+        <h1>Multiplicación de números grandes por Fuerza Bruta</h1>
         <h2>Inserte los números que desea multiplicar</h2>
     </div>
     <div class="lectura">
@@ -27,13 +27,12 @@
         </div>
     </div>
     <div class="seleccion">
-        <input class="designbutton" type="button" value="Fuerza Bruta" id="fbruta" onclick="asignar(1);">
-        <input class="designbutton" type="button" value="Karatsuba" id="fkaratsuba" onclick="asignar(2);">
+        <input class="designbutton" type="button" value="Iniciar" id="fbruta" onclick="asignar(1);">
     </div>
     <div style="width: 50%; float:left" id="Bloque">
         <div style="width: 10%; float:left" id="BPasos">
-            <input class="designbutton" type="button" value="Pasos" id="bpasos" onclick="asignar(3);" style="display: none;">
-            <input class="designbutton" type="button" value="Reset" id="breset" onclick="asignar(4);" style="display: none;">
+            <input class="designbutton" type="button" value="Pasos" id="bpasos" onclick="asignar(2);" style="display: none;">
+            <input class="designbutton" type="button" value="Reset" id="breset" onclick="asignar(3);" style="display: none;">
         </div>
         <div style="width: 75%; float:left" class="display" >
             <div class="carrys">
@@ -64,7 +63,6 @@
         }
         function desmarcar(){
             document.getElementById('fbruta').style.backgroundColor="#018ABE";
-            document.getElementById('fkaratsuba').style.backgroundColor="#018ABE";
             marcar(marcado);
         }
         function marcar(id){
@@ -72,13 +70,11 @@
                 document.getElementById('fbruta').style.backgroundColor="#001b48";
                 fb(id);
             }
-            if(id==2)
-                document.getElementById('fkaratsuba').style.backgroundColor="#001b48";
-            if(id==3){
+            if(id==2){
                 document.getElementById('bpasos').style.backgroundColor="#001b48";
                 bruteforce();
             }
-            if(id==4){
+            if(id==3){
                 document.getElementById('bpasos').style.backgroundColor="#001b48";
                 reset();
             }
