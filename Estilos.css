@@ -1,0 +1,194 @@
+/*-----------Body---------------*/
+body{
+    background-color:#d6ebee;
+}
+/*-----------FIN Body---------------*/
+
+/*-----------TEXTO---------------*/
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+
+.Titulo{
+    font-family: "Quicksand";
+    text-align: center;
+    color: #001b48;
+    font-size: 300%;
+    margin: 0;
+
+}
+
+.SubTitulo{
+    font-family: "Quicksand";
+    text-align: center;
+    color: #001b48;
+    font-size: 200%;
+    margin: 0;
+}
+
+.Texto{
+    font-family: "Quicksand";
+    text-align: center;
+    color: #001b48;
+    font-size: 40%;
+    margin: 0;
+}
+
+.Comentarios{
+    font-family: "Quicksand";
+    text-align: center;
+    color: #001b48;
+    font-size: 90%;
+    margin: 0;
+}
+
+/*-----------FIN TEXTO------------*/
+
+
+/*-----barra de navegación-----*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #02457a;
+}
+
+li {
+  float: left;
+}
+
+li a {
+    font-family: "Quicksand";
+    font-size: 150%;
+    display: block;
+    color: #d6ebee;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+  background-color: #001b48;
+}
+
+/*-----------Fin barra---------*/  
+
+/*-----------TITULO---------*/
+.DivTitulo{
+    text-align: center;
+    height: 10%;
+    width:100%;
+    align-items: center;
+}
+
+.DivAux{
+    text-align: center;
+    height: 20px;
+    width:100%;
+    align-items: center;
+}
+/*-----------fin TITULO---------*/
+
+
+/*----LECTURA DE DATOS--------*/
+.lectura{
+    font-family: "Quicksand";
+    text-align:center;
+    font-size: 150%;
+    color: #02457A;
+}
+
+.design{
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    width: 25em;
+    text-align:center;
+}
+
+/*Botones*/
+
+.seleccion{
+    text-align: center;
+    margin: 10px;
+}
+
+.designbutton{
+    font-family: "Quicksand";
+    border: 0;
+    text-align:center;
+    background-color: #018ABE;
+    color: white;
+    line-height: 2.5;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 100%;
+}
+.designbutton:hover{
+    font-family: "Quicksand";
+    border: 0;
+    text-align:center;
+    background-color: #02457A;
+    color: white;
+    line-height: 2.5;
+    border-radius: 10px;
+    width: 120px;
+    height: 40px;
+    font-size: 100%;
+}
+/*fin botones*/
+
+/*---- fin LECTURA DE DATOS--------*/
+
+/*-----------CONTENIDO---------*/
+.DivContenido{
+    text-align: center;
+    height: 500px;
+    width:100%;
+    align-items: center;
+}
+
+.DivVacio{
+    text-align: center;
+    height: 65%;
+    width: 5%;
+    align-items: center;
+    float:right;
+    border-radius: 12px;
+    background-color: #d6ebee;
+}
+
+.DivAnimacion{
+    text-align: center;
+    height: 65%;
+    width:70%;
+    align-items: center;
+    float:right;
+    border-radius: 12px;
+    background-color: #97cadb;
+    overflow: auto;
+}
+
+.DivCodigo{
+    text-align: center;
+    height: 65%;
+    width:25%;
+    align-items: center;
+    float:right;
+    border-radius: 12px;
+    background-color: #97cadb;
+    overflow: auto;
+}
+/*----------- fin CONTENIDO---------*/
+
+/*------TABULADORES------*/
+.tabLargo{
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.tabMed{
+    display: inline-block;
+    margin-left: 7.5px;
+}
+/*------fin TABULADORES------*/
