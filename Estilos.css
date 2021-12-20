@@ -7,6 +7,13 @@ body{
 /*-----------TEXTO---------------*/
 @import url("https://fonts.googleapis.com/css?family=Quicksand");
 
+h1{
+    font-family: "Quicksand";
+    text-align: center;
+    color: #001b48;
+    font-size: 300%;
+    margin: 0;
+}
 .Titulo{
     font-family: "Quicksand";
     text-align: center;
@@ -155,7 +162,7 @@ li a:hover {
     align-items: center;
     float:right;
     border-radius: 12px;
-    background-color: #d6ebee;
+    background-color: #97CADB;
 }
 
 .DivAnimacion{
@@ -165,7 +172,7 @@ li a:hover {
     align-items: center;
     float:right;
     border-radius: 12px;
-    background-color: #97cadb;
+    background-color: #018ABE;
     overflow: auto;
 }
 
@@ -176,7 +183,7 @@ li a:hover {
     align-items: center;
     float:right;
     border-radius: 12px;
-    background-color: #97cadb;
+    background-color: #018ABE;
     overflow: auto;
 }
 /*----------- fin CONTENIDO---------*/
