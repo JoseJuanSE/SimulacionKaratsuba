@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacion Fuerza Bruta</title>
+    <link href="SKaratsuba.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:#97CADB">
+    <ul>
+        <li><a href="Index.html">Inicio</a></li>
+        <li><a href="Fuerza_Bruta.html">Fuerza Bruta</a></li>
+        <li><a href="Karatsuba.html">Karatsuba</a></li>
+    </ul>
+    <div>
+        <h1>Multiplicación de números grandes por Fuerza Bruta</h1>
+        <h2>Inserte los números que desea multiplicar</h2>
+    </div>
+    <div class="lectura">
+        <div style="width: 50%; float:left">
+            <form>
+                <label for="nuno">Numero 1:</label><br>
+                <input type="text" id="nuno" name="nuno" class="design"><br>
+            </form>
+        </div>
+        <div style="width: 50%; float:right">
+            <form>
+                <label for="ndos">Numero 2:</label><br>
+                <input type="text" id="ndos" name="ndos" class="design"><br>
+            </form>
+        </div>
+    </div>
+    <div class="seleccion">
+        <input class="designbutton" type="button" value="Iniciar" id="fbruta" onclick="asignar(1);">
+    </div>
+    <div style="width: 50%; float:left" id="Bloque">
+        <div style="width: 10%; float:left" id="BPasos">
+            <input class="designbutton" type="button" value="Pasos" id="bpasos" onclick="asignar(2);" style="display: none;">
+            <input class="designbutton" type="button" value="Reset" id="breset" onclick="asignar(3);" style="display: none;">
+        </div>
+        <div style="width: 75%; float:left" class="display" >
+            <div class="carrys">
+                <label id="carry"></label><br>
+            </div>
+            <div>
+                <label id="display1"></label><br>
+                <label id="display2"><u></u></label><br>
+            </div>
+            <div id="contenedor"></div>
+        </div>
+    </div>
+    <div style="width: 50%; float:right" id="Bloque2">
+        <div class="pseudo">
+            <label id="display3"></label><br>
+            <div id=pseudocode></div>
+        </div>
+
+    </div>
+    <script>
+        var marcado=0;
+        var n1;
+        var n2;
+        var actual=0;
+        function asignar(valor){
+            marcado=valor;
+            desmarcar();
+        }
+        function desmarcar(){
+            document.getElementById('fbruta').style.backgroundColor="#018ABE";
+            marcar(marcado);
+        }
+        function marcar(id){
+            if(id==1){
+                document.getElementById('fbruta').style.backgroundColor="#001b48";
+                fb(id);
+            }
+            if(id==2){
+                document.getElementById('bpasos').style.backgroundColor="#001b48";
+                bruteforce();
+            }
+            if(id==3){
+                document.getElementById('bpasos').style.backgroundColor="#001b48";
+                reset();
+            }
+        }
+        function fb(id){
+            n1=document.getElementById("nuno").value;
+            document.getElementById('display1').innerHTML = n1;
+            n2=document.getElementById("ndos").value;
+            document.getElementById('display2').innerHTML = "X"+n2;
+            document.getElementById('bpasos').style.display = 'inline';
+            document.getElementById('display3').innerHTML="Se multiplicará "+n1+" X "+n2+".";
+        }
+        function bruteforce(){
+            var acompletar="";
+            var sn2=n2.toString();
+            var sn1=n1.toString();
+            var aux=parseInt(sn2[sn2.length-1-actual]);
+            var aux2;
+            var acarreos=" 0";
+            var newLabel = document.createElement('label');
+            var newLabel2 = document.createElement('label');
+            for(var i=0;i<actual;++i){
+                acompletar=acompletar.concat("0");
+            }
+            
+            if(actual!=n2.length){
+                for(var j=sn1.length-1;j>0;--j){
+                    aux2=parseInt(sn1[j]);
+                    aux2=((aux*aux2)/10);
+                    aux2=Math.floor(aux2);
+                    acarreos=" "+aux2+acarreos;
+                }
+                if(actual==n2.length-1){
+                    newLabel.innerHTML ='<u>'+n1*aux+acompletar+'</u><br>';
+                    newLabel2.innerHTML = "Se multiplica "+aux+" X "+n1+'<br>';                }
+                else{
+                    newLabel.innerHTML =n1*aux+acompletar+'<br>';
+                    newLabel2.innerHTML = "Se multiplica "+aux+" X "+n1+'<br>';  
+                }
+                actual+=1;
+            }
+            else{
+                newLabel.innerHTML = n1*n2+'<br>';
+                newLabel2.innerHTML = "El resultado final es "+n1*n2+'<br>';
+                actual=0;
+                document.getElementById('bpasos').style.display = 'none';
+                document.getElementById('breset').style.display = 'inline';
+                acarreos="";
+            }
+            var pseudo = document.getElementById('pseudocode');
+            var contenedor = document.getElementById('contenedor');
+            contenedor.appendChild(newLabel);
+            pseudo.appendChild(newLabel2);
+            document.getElementById('carry').innerHTML = acarreos;
+        }
+        function reset(){
+            document.getElementById("contenedor").innerHTML="";
+            document.getElementById("pseudocode").innerHTML="";
+            document.getElementById("nuno").innerHTML="";
+            document.getElementById("ndos").innerHTML="";
+            document.getElementById("display1").innerHTML="";
+            document.getElementById("display2").innerHTML="";
+            document.getElementById('breset').style.display = 'none';
+            document.getElementById("display3").innerHTML="";
+            marcado=0;
+        }
+    </script>
+</body>
+</html>

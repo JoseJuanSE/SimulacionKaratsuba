@@ -129,7 +129,7 @@ function Animacion() {
     }
 
     const solve = async () => {
-        var exp = "EXPLICACION <br>";
+        var exp = "<br>";
         for (var i = 0; i < mapa.length; i++) {
             const myArray = mapa[i].split(" ");
             for (var j = 0; j < myArray.length; j++) {
